@@ -9,8 +9,6 @@ RUN  apt-get update \
 	 && apt-get -y install curl
 RUN  apt-get update && \
 	 apt-get install -y openjdk-8-jdk
-RUN  apt install -y maven
-RUN  apt install -y git
 ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/bin
 RUN   apt-get update \
   &&  apt-get install -y wget \
