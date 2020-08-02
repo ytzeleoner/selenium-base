@@ -5,6 +5,10 @@
 #RUN apk add git
 FROM ubuntu:18.04
 #FROM selenium/standalone-chrome
+RUN apt-get update \
+    && apt-get install -y tzdata
+RUN ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
+RUN dpkg-reconfigure --frontend noninteractive tzdata
 RUN  apt-get update \
 	 && apt-get -y install curl
 RUN  apt-get update && \
